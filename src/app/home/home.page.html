@@ -14,9 +14,12 @@
     >Search</ion-button>
   <div *ngIf="score$ | async as sc">
     <h1>ID: {{sc.id}}</h1>
-    <h2>Quiz1: {{sc.score.quiz1}}</h2>
-    <h2>Quiz2: {{sc.score.quiz2}}</h2>
-    <h2>Quiz3: {{sc.score.quiz3}}</h2>
+    <h2>Quiz1: {{sc.quiz1}}</h2>
+    <h2>Quiz2: {{sc.quiz2}}</h2>
+    <h2>Quiz3: {{sc.quiz3}}</h2>
+    <h2>Quiz4: {{sc.quiz4}}</h2>
+    <h2>Quiz5: {{sc.quiz5}}</h2>
+    <h2>Sum: {{sc.sum}}</h2>
     
   </div>
 </ion-content>
