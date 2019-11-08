@@ -1,14 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Score Provider
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <ion-item>
+    <ion-label>ID</ion-label>
+    <ion-input type="type" [(ngModel)]="input_id"></ion-input>
+  </ion-item>
+  <ion-button expand="block" fill="clear" (click)="getScore(input_id)"
+    >Search</ion-button>
+  <div *ngIf="score$ | async as sc">
+    <h1>ID: {{sc.id}}</h1>
+    <h2>Quiz1: {{sc.score.quiz1}}</h2>
+    <h2>Quiz2: {{sc.score.quiz2}}</h2>
+    <h2>Quiz3: {{sc.score.quiz3}}</h2>
+    
   </div>
 </ion-content>
